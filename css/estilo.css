@@ -1,0 +1,136 @@
+:root {
+    --color-first: #fd0026;
+    --color-second: #000000;
+    --color-third: #FFF;
+    --color-warning: #CEB02A;
+    
+    --color-black-first: #000;
+    --color-black-second: #3A4042;
+  }
+  
+  html, body {
+    font-size: 10px;
+    height: 100vh;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--color-second);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .convert {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black-second);
+    padding: 3rem;
+    border: 10px solid var(--color-black-first);
+    color: var(--color-third);
+    max-width: 650px;
+  }
+  
+  .title {
+    color: var(--color-warning);
+    font-size: 3rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .title:before,
+  .title:after {
+    content: '';
+    background-image: url(https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/512/coin-us-dollar-icon.png);
+    display: block;
+    position: absolute;
+    top: -20px;
+    width: 55px;
+    height: 55px;
+    background-size: cover;
+    animation: 2s girando ease-in-out infinite;
+  }
+  
+  .title:before {
+    left: -60px;
+  }
+  
+  .title:after {
+    right: -60px;
+  }
+  
+  
+  @keyframes girando {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+  }
+  
+  .subtitle {
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--color-third);
+    margin-bottom: 4rem;
+  }
+  
+  .label {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .real {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin-left: 10px;
+  border: 0;
+  border-radius: 0;
+  padding: 10px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.6rem;
+  }
+  
+  .dollar {
+    margin-left: 20px;
+  }
+  
+  .button {
+    width: 100%;
+    height: 5rem;
+    margin-top: 3rem;
+    background-color: var(--color-first);
+    border: none;
+    font-family: inherit;
+    color: var(--color-third);
+    font-size: 2rem;
+    box-shadow: 4px 4px 0 var(--color-black-first);
+    cursor: pointer;
+    transition: 100ms transform ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.02);
+  }
